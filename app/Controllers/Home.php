@@ -46,6 +46,26 @@ class Home extends BaseController
         // Pass the fetched data to the view
         return view('view_inventory', ['data' => $data]);
     }
+    public function Diary_inventory()
+    {
+        $model = new InventoryModel();
+        $modelnew = new ProductModel();
+        $data['inventory'] = $model->getInventoryData();
+        $data['product']=$modelnew->getproduct();
+// print_r($data['product']);die;
+        // Pass the fetched data to the view
+        return view('view_inventory_dairy', ['data' => $data]);
+    }
+    public function Non_Diary_inventory()
+    {
+        $model = new InventoryModel();
+        $modelnew = new ProductModel();
+        $data['inventory'] = $model->getInventoryData();
+        $data['product']=$modelnew->getproduct();
+// print_r($data['product']);die;
+        // Pass the fetched data to the view
+        return view('view_inventory_non_dairy', ['data' => $data]);
+    }
     public function footer()
     {
         echo  view('footer');

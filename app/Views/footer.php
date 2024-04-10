@@ -375,7 +375,8 @@
         }
     });
     </script>
-    <script src="public/assets/js/plugins/datatables.js"></script>  
+    <script src="public/assets/js/plugins/datatables.js"></script> 
+     
 
 </body>
 
