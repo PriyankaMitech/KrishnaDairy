@@ -8,7 +8,7 @@ class InventoryModel extends Model
 {
     protected $table = 'tbl_inventory_details';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['type','source','vendor_name','title', 'category', 'unit', 'price','measurement','packaging','shelf_life_days'];
+    protected $allowedFields = ['type','source','vendor_name','product', 'category', 'unit', 'price','measurement','packaging','shelf_life_days'];
 
     public function getInventoryData()
     {

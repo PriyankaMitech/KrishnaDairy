@@ -40,22 +40,88 @@
                                     <div class="card-body p-3">
                                         <div class="row add-product-section" style="display: none;">
                                             <div class="col-12">
-
                                                 <form action="<?= base_url('saveProduct'); ?>" method="post">
-                                                    <div class="mb-3">
-                                                        <label for="title" class="form-label">Title</label>
-                                                        <input type="text" class="form-control" id="title" name="title">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="mb-3">
+                                                                <label for="type" class="form-label">Type</label>
+                                                                <select class="form-select form-control" id="type"
+                                                                    name="type">
+                                                                    <option value="dairy">Dairy</option>
+                                                                    <option value="non_dairy">Non-Dairy</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="mb-3">
+                                                                <label for="category"
+                                                                    class="form-label">Category</label>
+                                                                <input type="text" class="form-control" id="category"
+                                                                    name="category">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="mb-3">
+                                                                <label for="product" class="form-label">Product</label>
+                                                                <input type="text" class="form-control" id="product"
+                                                                    name="product">
+                                                            </div>
+                                                        </div>
+                                                       
+                                                        
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <label for="category" class="form-label">Category</label>
-                                                        <input type="text" class="form-control" id="category"
-                                                            name="category">
+                                                    <div class="row">
+                                                    <div class="col-3">
+                                                            <label for="inventory-unit"
+                                                                class="form-label ">Measurement</label>
+                                                            <select id="inventory-unit" class="form-select form-control"
+                                                                name="measurement">
+                                                                <option value="kg">kg</option>
+                                                                <option value="ltr">ltr</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="mb-3">
+                                                                <label for="source" class="form-label">Source</label>
+                                                                <select class="form-select form-control" id="source"
+                                                                    name="source">
+                                                                    <option value="in_house">In-House</option>
+                                                                    <option value="vendor">Vendor</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="vendor-info row" style="display: none;">
+                                                                <div class="mb-3 col-md-6">
+                                                                    <label for="vendor_name" class="form-label">Vendor
+                                                                        Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="vendor_name" name="vendor_name">
+                                                                </div>
+                                                                <div class="mb-3 col-md-6">
+                                                                    <label for="price" class="form-label">Price</label>
+                                                                    <input type="text" class="form-control" id="price"
+                                                                        name="price">
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <button type="submit" class="btn btn-primary">Add Product</button>
+                                                    <!-- <div class="col-4">
+                                                            <label for="inventory-unit"
+                                                                class="form-label ">Measurement</label>
+                                                            <select id="inventory-unit" class="form-select form-control"
+                                                                name="measurement">
+                                                                <option value="kg">kg</option>
+                                                                <option value="ltr">ltr</option>
+                                                            </select>
+                                                        </div> -->
+                                                    <button type="submit" class="btn btn-primary">Add
+                                                        Product</button>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </table>
@@ -69,9 +135,19 @@
     document.addEventListener('DOMContentLoaded', function() {
         const addProductBtn = document.querySelector('.add-product-btn');
         const addProductSection = document.querySelector('.add-product-section');
+        const sourceSelect = document.getElementById('source');
+        const vendorInfo = document.querySelector('.vendor-info');
 
         addProductBtn.addEventListener('click', function() {
-            addProductSection.style.display = 'block';
+            addProductSection.style.display = 'flex';
+        });
+
+        sourceSelect.addEventListener('change', function() {
+            if (sourceSelect.value === 'vendor') {
+                vendorInfo.style.display = 'flex';
+            } else {
+                vendorInfo.style.display = 'none';
+            }
         });
     });
     </script>

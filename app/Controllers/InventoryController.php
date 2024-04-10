@@ -16,7 +16,7 @@ class InventoryController extends BaseController
             'type' => $this->request->getPost('type'),
             'source' => $this->request->getPost('source'),
             'vendor_name' => $this->request->getPost('vendor_name'),
-            'title' => $this->request->getPost('title'),
+            'product' => $this->request->getPost('product'),
             'category' => $this->request->getPost('category'),
             'unit' => $this->request->getPost('unit'),
             'price' => $this->request->getPost('price'),
