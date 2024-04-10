@@ -1,0 +1,21 @@
+.form-control{
+    border: 2px solid #121213 !important;
+    font-size: 0.975rem !important;
+    font-weight: 600 !important;  
+    width: 100% !important; 
+    padding-left: 10px;     
+}
+.form-label{
+    font-size: 0.975rem !important;
+    font-weight: 600 !important;
+    padding:30px 0px 0px 5px;
+}
+.btn {
+    margin-top: 1rem;
+}
+.bg-gradient-primary {
+  
+    
+    background: #EC407A linear-gradient(180deg,#EC407A,#EC407A) repeat-x!important;
+}
+

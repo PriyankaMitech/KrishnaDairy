@@ -1,0 +1,369 @@
+INFO - 2024-03-18 04:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 04:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 05:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 06:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 06:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-18 06:03:14 --> mysqli_sql_exception: Unknown column 'vendor_rate' in 'field list' in E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 E:\xampp\htdocs\KrushnaDairy\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\KrushnaDairy\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\KrushnaDairy\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 E:\xampp\htdocs\KrushnaDairy\app\Controllers\VendorController.php(30): CodeIgniter\Model->insert(Array)
+#8 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+#9 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+#10 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xampp\htdocs\KrushnaDairy\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-18 06:03:14 --> Unknown column 'vendor_rate' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `vendor_rate`, `address`, `billing_address`) VALUES (\'siddesh\', \'Mitech\', \'siddheshkadgemitech@gmail.com\', \'wndiehi2329\', \'432152534534\', \'50 rs/ltr\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `vendor_rate`, `address`, `billing_address`) VALUES (\'siddesh\', \'Mitech\', \'siddheshkadgemitech@gmail.com\', \'wndiehi2329\', \'432152534534\', \'50 rs/ltr\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `vendor_rate`, `address`, `billing_address`) VALUES (\'siddesh\', \'Mitech\', \'siddheshkadgemitech@gmail.com\', \'wndiehi2329\', \'432152534534\', \'50 rs/ltr\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `vendor_rate`, `address`, `billing_address`) VALUES (:vendor_name:, :company_name:, :email:, :pan_number:, :poc:, :vendor_rate:, :address:, :billing_address:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VendorController.php(30): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-18 06:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 06:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 06:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 06:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 06:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 06:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 06:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-18 06:39:49 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 25.
+ 1 APPPATH\Views\view_reports.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 25)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:40:48 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:42:29 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:42:30 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:25 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:26 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:26 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:27 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:27 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:33 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:36 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:37 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:37 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:40 --> view(): Argument #2 ($data) must be of type array, string given, called in E:\xampp\htdocs\KrushnaDairy\app\Controllers\Home.php on line 47
+in SYSTEMPATH\Common.php on line 1168.
+ 1 APPPATH\Controllers\Home.php(47): view('view_inventory', 'view_reports', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->inventory()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:44:44 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:45:10 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:45:10 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:53:52 --> Undefined variable $data
+in APPPATH\Views\view_reports.php on line 18.
+ 1 APPPATH\Views\view_reports.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 18)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(66): view('view_reports')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:55:47 --> Undefined variable $model
+in APPPATH\Controllers\Home.php on line 66.
+ 1 APPPATH\Controllers\Home.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $model', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Controllers\\Home.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:56:02 --> Undefined constant "App\Controllers\data"
+in APPPATH\Controllers\Home.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:56:39 --> syntax error, unexpected token "=>", expecting "]"
+in APPPATH\Controllers\Home.php on line 67.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:58:06 --> Undefined variable $titles
+in APPPATH\Views\view_reports.php on line 11.
+ 1 APPPATH\Views\view_reports.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titles', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(67): view('view_reports', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:58:34 --> Undefined variable $title
+in APPPATH\Views\view_reports.php on line 11.
+ 1 APPPATH\Views\view_reports.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(67): view('view_reports', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 06:59:53 --> Undefined variable $filteredInventory
+in APPPATH\Views\view_reports.php on line 28.
+ 1 APPPATH\Views\view_reports.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filteredInventory', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(67): view('view_reports', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 07:01:25 --> Undefined variable $titles
+in APPPATH\Views\view_reports.php on line 13.
+ 1 APPPATH\Views\view_reports.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titles', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 13)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(67): view('view_reports', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 07:01:26 --> Undefined variable $titles
+in APPPATH\Views\view_reports.php on line 13.
+ 1 APPPATH\Views\view_reports.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titles', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 13)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(67): view('view_reports', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 07:01:26 --> Undefined variable $titles
+in APPPATH\Views\view_reports.php on line 13.
+ 1 APPPATH\Views\view_reports.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titles', 'E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php', 13)
+ 2 SYSTEMPATH\View\View.php(224): include('E:\\xampp\\htdocs\\KrushnaDairy\\app\\Views\\view_reports.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('view_reports', [], true)
+ 5 APPPATH\Controllers\Home.php(67): view('view_reports', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->Reports()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-18 07:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:48:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 08:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 10:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 10:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 10:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 12:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 12:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 12:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 12:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 12:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-18 12:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,10 @@
+.form-control{
+    border: 2px solid #121213 !important;
+    font-size: 0.975rem !important;
+    font-weight: 600 !important;  
+    width: 100% !important;      
+}
+.form-label{
+    font-size: 0.975rem !important;
+    font-weight: 600 !important;
+}

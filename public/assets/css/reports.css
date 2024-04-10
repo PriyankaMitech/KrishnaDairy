@@ -1,0 +1,17 @@
+.bg-gradient-primary {
+  
+    
+    background: #EC407A linear-gradient(180deg,#EC407A,#EC407A) repeat-x!important;
+}
+.form-control{
+    border: 2px solid #121213 !important;
+    font-size: 0.975rem !important;
+    font-weight: 600 !important;  
+    padding-left: 10px;     
+}
+.table-bordered {
+    border: 1px solid #060606;
+}
+.table> :not(:last-child)> :last-child>* {
+    border-bottom-color:#2d5555 !important;
+}

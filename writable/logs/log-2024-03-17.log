@@ -1,0 +1,153 @@
+INFO - 2024-03-17 03:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 04:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 04:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 04:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 04:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 04:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-17 04:20:45 --> mysqli_sql_exception: Unknown column 'vendor_name' in 'field list' in E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 E:\xampp\htdocs\KrushnaDairy\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\KrushnaDairy\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\KrushnaDairy\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 E:\xampp\htdocs\KrushnaDairy\app\Controllers\VendorController.php(28): CodeIgniter\Model->insert(Array)
+#8 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+#9 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+#10 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xampp\htdocs\KrushnaDairy\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-17 04:20:45 --> Unknown column 'vendor_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `gstin`, `pan_number`, `contact_number`, `poc`, `address`, `billing_address`) VALUES (\'sharan\', \'Mitech\', \'mitecsharanu@gmail.com\', \'45wedw4etr43\', \'cwaswfd4wr\', \'5345345341\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `gstin`, `pan_number`, `contact_number`, `poc`, `address`, `billing_address`) VALUES (\'sharan\', \'Mitech\', \'mitecsharanu@gmail.com\', \'45wedw4etr43\', \'cwaswfd4wr\', \'5345345341\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `gstin`, `pan_number`, `contact_number`, `poc`, `address`, `billing_address`) VALUES (\'sharan\', \'Mitech\', \'mitecsharanu@gmail.com\', \'45wedw4etr43\', \'cwaswfd4wr\', \'5345345341\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `gstin`, `pan_number`, `contact_number`, `poc`, `address`, `billing_address`) VALUES (:vendor_name:, :company_name:, :email:, :gstin:, :pan_number:, :contact_number:, :poc:, :address:, :billing_address:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VendorController.php(28): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-17 04:22:45 --> mysqli_sql_exception: Unknown column 'gstin' in 'field list' in E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 E:\xampp\htdocs\KrushnaDairy\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\KrushnaDairy\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\KrushnaDairy\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 E:\xampp\htdocs\KrushnaDairy\app\Controllers\VendorController.php(28): CodeIgniter\Model->insert(Array)
+#8 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+#9 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+#10 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xampp\htdocs\KrushnaDairy\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-17 04:22:46 --> Unknown column 'gstin' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `gstin`, `pan_number`, `contact_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'45wedw4etr43\', \'cwaswfd4wr\', \'5345345341\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `gstin`, `pan_number`, `contact_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'45wedw4etr43\', \'cwaswfd4wr\', \'5345345341\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `gstin`, `pan_number`, `contact_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'45wedw4etr43\', \'cwaswfd4wr\', \'5345345341\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `gstin`, `pan_number`, `contact_number`, `poc`, `address`, `billing_address`) VALUES (:vendor_name:, :company_name:, :email:, :gstin:, :pan_number:, :contact_number:, :poc:, :address:, :billing_address:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VendorController.php(28): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-17 04:23:41 --> mysqli_sql_exception: Column 'vendor_name' cannot be null in E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 E:\xampp\htdocs\KrushnaDairy\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\KrushnaDairy\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\KrushnaDairy\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 E:\xampp\htdocs\KrushnaDairy\app\Controllers\VendorController.php(28): CodeIgniter\Model->insert(Array)
+#8 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+#9 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+#10 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xampp\htdocs\KrushnaDairy\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-17 04:23:41 --> Column 'vendor_name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'cwaswfd4wr\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'cwaswfd4wr\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'cwaswfd4wr\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (:vendor_name:, :company_name:, :email:, :pan_number:, :poc:, :address:, :billing_address:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VendorController.php(28): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-17 04:23:45 --> mysqli_sql_exception: Column 'vendor_name' cannot be null in E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 E:\xampp\htdocs\KrushnaDairy\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\KrushnaDairy\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\KrushnaDairy\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 E:\xampp\htdocs\KrushnaDairy\app\Controllers\VendorController.php(28): CodeIgniter\Model->insert(Array)
+#8 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+#9 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+#10 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xampp\htdocs\KrushnaDairy\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-17 04:23:45 --> Column 'vendor_name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'cwaswfd4wr\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'cwaswfd4wr\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'cwaswfd4wr\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (:vendor_name:, :company_name:, :email:, :pan_number:, :poc:, :address:, :billing_address:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VendorController.php(28): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-17 04:25:00 --> mysqli_sql_exception: Column 'vendor_name' cannot be null in E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 E:\xampp\htdocs\KrushnaDairy\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 E:\xampp\htdocs\KrushnaDairy\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 E:\xampp\htdocs\KrushnaDairy\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\xampp\htdocs\KrushnaDairy\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 E:\xampp\htdocs\KrushnaDairy\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 E:\xampp\htdocs\KrushnaDairy\app\Controllers\VendorController.php(28): CodeIgniter\Model->insert(Array)
+#8 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+#9 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+#10 E:\xampp\htdocs\KrushnaDairy\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\xampp\htdocs\KrushnaDairy\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-17 04:25:00 --> Column 'vendor_name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'cwaswfd4wr\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'cwaswfd4wr\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (NULL, \'Mitech\', \'mitecsharanu@gmail.com\', \'cwaswfd4wr\', \'21312222\', \'sfcsAWF sdvewe rwe rv re \', \'cwFETGH6H VCXTEB FFEZBF \')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_vendor_details` (`vendor_name`, `company_name`, `email`, `pan_number`, `poc`, `address`, `billing_address`) VALUES (:vendor_name:, :company_name:, :email:, :pan_number:, :poc:, :address:, :billing_address:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VendorController.php(28): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\VendorController->Vendor()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VendorController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-03-17 04:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-17 04:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
