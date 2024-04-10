@@ -19,3 +19,9 @@
     background: #EC407A linear-gradient(180deg,#EC407A,#EC407A) repeat-x!important;
 }
 
+.dropdown-item{
+    font-size: 0.975rem !important;
+    font-weight: 600 !important;
+   padding-left: 45px;
+   color: #EC407A!important;
+}

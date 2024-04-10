@@ -38,6 +38,8 @@ $routes->get('dashboard', 'Home::dashboard');
 $routes->get('sidebar', 'Home::sidebar');
 $routes->get('footer', 'Home::footer');
 $routes->get('view_inventory', 'Home::inventory');
+$routes->get('view_inventory_dairy', 'Home::Diary_inventory');
+$routes->get('view_inventory_non_dairy', 'Home::Non_Diary_inventory');
 $routes->get('view_product', 'Home::product');
 $routes->post('saveProduct', 'ProductController::saveProduct');
 $routes->get('view_vendor', 'Home::Vendor');
