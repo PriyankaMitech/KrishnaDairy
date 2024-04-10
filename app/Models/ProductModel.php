@@ -8,7 +8,7 @@ class ProductModel extends Model
 {
     protected $table = 'tbl_product_details';
     protected $primaryKey = 'p_id';
-    protected $allowedFields = ['title', 'category'];
+    protected $allowedFields = ['product', 'category', 'type', 'product', 'measurement', 'source', 'vendor_name', 'price'];
 
 
 

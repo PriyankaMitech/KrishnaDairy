@@ -42,7 +42,7 @@ class Home extends BaseController
         $modelnew = new ProductModel();
         $data['inventory'] = $model->getInventoryData();
         $data['product']=$modelnew->getproduct();
-// print_r($data['product']);die;
+// echo '<pre>'; print_r($data['product']);die;
         // Pass the fetched data to the view
         return view('view_inventory', ['data' => $data]);
     }
