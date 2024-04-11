@@ -37,4 +37,24 @@ class ProductController extends BaseController
         // Redirect back to the page after adding the product
         return redirect()->to('view_product');
     }
+
+    public function saveProductmaster()
+    {
+        $productModel = new ProductModel();
+        $db = \Config\Database::connect();
+        $type = $this->request->getPost('type');
+        $product = $this->request->getPost('product');
+        $category = $this->request->getPost('category');
+       
+        $data = [
+            'type' =>$type,
+            'product' => $product,
+            'category' => $category,
+           
+        ];
+// print_r
+        $db->table('tbl_product_master')->insert($data);
+        return redirect()->to(base_url('view_product_master'))->with('success', 'Data saved successfully.');
+    
+    }
 }

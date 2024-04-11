@@ -42,19 +42,22 @@
                                             <div class="col-12">
                                                 <form action="<?= base_url('Inventory'); ?>" method="post">
 
-                                                    <div class="row align-items-start">
-                                                        <!-- Type (Dairy/Non-dairy) -->
+                                                <div class="row align-items-start">
                                                         <div class="col-4">
-                                                            <label for="inventory-type"
-                                                                class="form-label text-center">Type</label>
-                                                            <select id="inventory-type" class="form-select form-control"
-                                                                name="type">
-                                                                <option value="dairy">Dairy</option>
-                                                                <option value="non-dairy">Non-Dairy</option>
+                                                            <label for="inventory-title"
+                                                                class="form-label text-center">Product</label>
+
+                                                            <select id="mainSelection" class="form-select form-control"
+                                                                name="product">
+                                                                <?php
+                                                                $uniqueTitles = array_unique(array_column($data['product'], 'product'));
+                                                                foreach ($uniqueTitles as $product):
+                                                            ?>
+                                                                <option value="<?= $product; ?>"><?= ucfirst($product); ?>
+                                                                </option>
+                                                                <?php endforeach; ?>
                                                             </select>
                                                         </div>
-
-                                                        <!-- Source (In-house/Vendor) -->
                                                         <div class="col-4">
                                                             <label for="inventory-source"
                                                                 class="form-label text-center">Source</label>
@@ -73,23 +76,10 @@
                                                             <input type="text" class="form-control" id="vendor-name"
                                                                 name="vendor_name" placeholder="Enter vendor name">
                                                         </div>
+
                                                     </div>
                                                     <div class="row align-items-start">
-                                                        <div class="col-4">
-                                                            <label for="inventory-title"
-                                                                class="form-label text-center">Title</label>
 
-                                                            <select id="mainSelection" class="form-select form-control"
-                                                                name="title">
-                                                                <?php
-                                                                $uniqueTitles = array_unique(array_column($data['product'], 'title'));
-                                                                foreach ($uniqueTitles as $title):
-                                                            ?>
-                                                                <option value="<?= $title; ?>"><?= ucfirst($title); ?>
-                                                                </option>
-                                                                <?php endforeach; ?>
-                                                            </select>
-                                                        </div>
                                                         <div class="col-4">
                                                             <label for="inventory-category"
                                                                 class="form-label text-center">Category</label>
@@ -97,14 +87,14 @@
                                                                 class="form-select form-control" name="category">
                                                                 <?php
                                                                         // Get the selected title from the form submission or default to the first title
-                                                                        $selectedTitle = isset($_POST['title']) ? $_POST['title'] : ($data['product'][0]['title'] ?? '');
+                                                                        $selectedTitle = isset($_POST['product']) ? $_POST['product'] : ($data['product'][0]['product'] ?? '');
 
                                                                         // Get the selected category from the form submission or default to the first category of the selected title
                                                                         $selectedCategory = isset($_POST['category']) ? $_POST['category'] : '';
 
                                                                         // Filter products based on the selected title
                                                                         $filteredProducts = array_filter($data['product'], function($product) use ($selectedTitle) {
-                                                                            return $product['title'] === $selectedTitle;
+                                                                            return $product['product'] === $selectedTitle;
                                                                         });
 
                                                                         // Get unique categories for the filtered products
@@ -127,10 +117,6 @@
                                                             <input type="number" class="form-control"
                                                                 id="inventory-quantity" name="unit" value="1">
                                                         </div>
-                                                    </div>
-
-                                                    <div class="row align-items-start">
-
                                                         <div class="col-4">
                                                             <label for="inventory-unit"
                                                                 class="form-label ">Measurement</label>
@@ -140,6 +126,11 @@
                                                                 <option value="ltr">ltr</option>
                                                             </select>
                                                         </div>
+                                                    </div>
+
+                                                    <div class="row align-items-start">
+
+
                                                         <div class="col-4">
                                                             <label for="inventory-price"
                                                                 class="form-label">Price</label>
@@ -157,8 +148,8 @@
                                                                 <option value="pre-packed">Pre-packed</option>
                                                             </select>
                                                         </div>
-                                                    </div>
-                                                    <div class="row align-items-start">
+
+
                                                         <div class="col-4">
                                                             <label for="shelf-life" class="form-label">Shelf Life (in
                                                                 days)</label>
@@ -215,7 +206,7 @@
                                             Vendor name
                                         </th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Title
+                                            product
                                         </th>
                                         <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
@@ -259,7 +250,7 @@ foreach ($data['inventory'] as $product):
                                         <td class="text-center"><?= $product['type'] ?></td>
                                         <td class="text-center"><?= $product['source'] ?></td>
                                         <td class="text-center"><?= $product['vendor_name'] ?></td>
-                                        <td><?= $product['title'] ?></td>
+                                        <td><?= $product['product'] ?></td>
                                         <td><?= $product['category'] ?></td>
                                         <td class="text-center"><?= $product['unit'] ?></td>
                                         <td class="text-center"><?= $product['measurement'] ?></td>

@@ -42,9 +42,11 @@ $routes->get('view_inventory_dairy', 'Home::Diary_inventory');
 $routes->get('view_inventory_non_dairy', 'Home::Non_Diary_inventory');
 $routes->get('view_product', 'Home::product');
 $routes->post('saveProduct', 'ProductController::saveProduct');
+$routes->post('saveProductmaster', 'ProductController::saveProductmaster');
 $routes->get('view_vendor', 'Home::Vendor');
 $routes->post('Vendor', 'VendorController::Vendor');
 $routes->get('view_reports', 'Home::Reports');
+$routes->get('view_product_master', 'Home::P_master');
 
 
 
