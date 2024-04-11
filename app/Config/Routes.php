@@ -31,7 +31,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('login', 'Home::login');
-$routes->post('login', 'Home::dashboard');
+$routes->post('login', 'Home::Pricing');
 $routes->post('Inventory','InventoryController::Inventory');
 
 $routes->get('dashboard', 'Home::dashboard');
@@ -47,7 +47,7 @@ $routes->get('view_vendor', 'Home::Vendor');
 $routes->post('Vendor', 'VendorController::Vendor');
 $routes->get('view_reports', 'Home::Reports');
 $routes->get('view_product_master', 'Home::P_master');
-
+$routes->get('view_pricing', 'Home::Pricing');
 
 
 /*
