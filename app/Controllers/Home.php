@@ -19,7 +19,7 @@ class Home extends BaseController
 
         if ($email === 'valid@email.com' && $password === 'validpassword') {
             // Authentication successful, redirect to dashboard
-            return redirect()->to('dashboard');
+            return redirect()->to('view_pricing');
         } else {
             // Authentication failed, redirect back to login with error message
             return redirect()->back()->with('error', 'Invalid email or password');
@@ -90,6 +90,11 @@ class Home extends BaseController
     public function P_master()
     {
         echo  view('view_product_master');
+        
+    }
+    public function Pricing()
+    {
+        echo  view('view_pricing');
         
     }
     
