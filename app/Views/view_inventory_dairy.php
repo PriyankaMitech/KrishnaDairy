@@ -48,12 +48,13 @@
                                                                 class="form-label text-center">Product</label>
 
                                                             <select id="mainSelection" class="form-select form-control"
-                                                                name="title">
+                                                                name="product">
                                                                 <?php
-                                                                $uniqueTitles = array_unique(array_column($data['product'], 'title'));
-                                                                foreach ($uniqueTitles as $title):
+                                                                $uniqueTitles = array_unique(array_column($data['product'], 'product'));
+                                                                foreach ($uniqueTitles as $product):
                                                             ?>
-                                                                <option value="<?= $title; ?>"><?= ucfirst($title); ?>
+                                                                <option value="<?= $product; ?>">
+                                                                    <?= ucfirst($product); ?>
                                                                 </option>
                                                                 <?php endforeach; ?>
                                                             </select>
@@ -87,14 +88,14 @@
                                                                 class="form-select form-control" name="category">
                                                                 <?php
                                                                         // Get the selected title from the form submission or default to the first title
-                                                                        $selectedTitle = isset($_POST['title']) ? $_POST['title'] : ($data['product'][0]['title'] ?? '');
+                                                                        $selectedTitle = isset($_POST['product']) ? $_POST['product'] : ($data['product'][0]['product'] ?? '');
 
                                                                         // Get the selected category from the form submission or default to the first category of the selected title
                                                                         $selectedCategory = isset($_POST['category']) ? $_POST['category'] : '';
 
                                                                         // Filter products based on the selected title
                                                                         $filteredProducts = array_filter($data['product'], function($product) use ($selectedTitle) {
-                                                                            return $product['title'] === $selectedTitle;
+                                                                            return $product['product'] === $selectedTitle;
                                                                         });
 
                                                                         // Get unique categories for the filtered products
@@ -148,6 +149,7 @@
                                                                 <option value="pre-packed">Pre-packed</option>
                                                             </select>
                                                         </div>
+                                                      
 
 
                                                         <div class="col-4">
@@ -157,7 +159,23 @@
                                                                 name="shelf_life_days"
                                                                 placeholder="Enter shelf life in days">
                                                         </div>
+                                                        <div class="col-4" id="quantity-container">
+                                                            <!-- Container for both inputs -->
+                                                            <div class="form-group" id="half-quantity-group">
+                                                                <label for="half-quantity" class="form-label">Half
+                                                                    Quantity</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="half-quantity" name="half_quantity">
+                                                            </div>
+                                                            <div class="form-group" id="full-quantity-group">
+                                                                <label for="full-quantity" class="form-label">Full
+                                                                    Quantity</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="full-quantity" name="full_quantity">
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                    
                                                     <button type="submit" class="btn btn-primary">Add Diary
                                                         Inventory</button>
                                                 </form>
@@ -181,6 +199,32 @@
             }
         });
         </script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const packagingSelect = document.getElementById('inventory-packaging');
+            const quantityContainer = document.getElementById('quantity-container');
+            const halfQuantityGroup = document.getElementById('half-quantity-group');
+            const fullQuantityGroup = document.getElementById('full-quantity-group');
+
+            // Function to toggle display of quantity inputs container
+            function toggleQuantityInputs() {
+                if (packagingSelect.value === 'loose') {
+                    quantityContainer.style.display = 'none';
+                } else {
+                    quantityContainer.style.display = 'block';
+                }
+            }
+
+            // Initial toggle based on the selected option
+            toggleQuantityInputs();
+
+            // Event listener for change in packaging select dropdown
+            packagingSelect.addEventListener('change', function() {
+                toggleQuantityInputs();
+            });
+        });
+        </script>
+
         <div class="row">
             <div class="col-12">
                 <div class="card my-4">
@@ -207,7 +251,7 @@
                                             Vendor name
                                         </th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Title
+                                            Product
                                         </th>
                                         <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
@@ -248,10 +292,10 @@ foreach ($data['inventory'] as $product):
 ?>
                                     <tr>
 
-                                        <td class="text-center"><?= $product['type'] ?></td>
+                                        <!-- <td class="text-center"><?= $product['type'] ?></td> -->
                                         <td class="text-center"><?= $product['source'] ?></td>
                                         <td class="text-center"><?= $product['vendor_name'] ?></td>
-                                        <td><?= $product['title'] ?></td>
+                                        <td><?= $product['product'] ?></td>
                                         <td><?= $product['category'] ?></td>
                                         <td class="text-center"><?= $product['unit'] ?></td>
                                         <td class="text-center"><?= $product['measurement'] ?></td>

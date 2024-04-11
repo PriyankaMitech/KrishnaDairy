@@ -29,9 +29,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"
         integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+nq+toPnvG5ZBh/Q7Witfsy2JT2rGM9hXUiREwE" crossorigin="anonymous">
     </script>
-    <!-- Nepcha Analytics (nepcha.com) -->
-    <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-    <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+   
 
 </head>
 
@@ -58,7 +56,7 @@
                         <span class="nav-link-text ms-1">Dashboard</span>
                     </a>
                 </li>
-            
+
                 <li class="nav-item">
                     <a class="nav-link text-white " href="<?php echo base_url('view_inventory_dairy'); ?>">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -92,8 +90,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  dropdown-toggle" href="<?php echo base_url('view_inventory'); ?>" id="inventoryDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link  dropdown-toggle" href="<?php echo base_url('view_inventory'); ?>"
+                        id="inventoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">inventory</i>
                         </div>
@@ -101,26 +99,13 @@
                     </a>
                     <ul class="dropdown-menu bg-gradient-dark text-white " aria-labelledby="inventoryDropdown">
                         <li><a class="dropdown-item text-white text-center me-2 d-flex align-items-center justify-content-left "
-                                href="<?php echo base_url('view_inventory_dairy'); ?>">Product master</a></li>
+                                href="<?php echo base_url('view_product_master'); ?>">Product master</a></li>
                         <li><a class="dropdown-item text-white text-center me-2 d-flex align-items-center justify-content-left"
-                                href="<?php echo base_url('view_inventory_non_dairy'); ?>">Category master</a></li>
-                                <li><a class="dropdown-item text-white text-center me-2 d-flex align-items-center justify-content-left"
-                                href="<?php echo base_url('view_inventory_non_dairy'); ?>">Price master</a></li>
-                                <li><a class="dropdown-item text-white text-center me-2 d-flex align-items-center justify-content-left"
-                                href="<?php echo base_url('view_inventory_non_dairy'); ?>">Measure master</a></li>
-                                <li><a class="dropdown-item text-white text-center me-2 d-flex align-items-center justify-content-left"
                                 href="<?php echo base_url('view_vendor'); ?>">Vendor master</a></li>
-                                
+
                     </ul>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link text-white " href="<?php echo base_url('view_vendor'); ?>">
-                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">receipt_long</i>
-                        </div>
-                        <span class="nav-link-text ms-1">Vendor</span>
-                    </a>
-                </li> -->
+              
                 <li class="nav-item">
                     <a class="nav-link text-white " href="<?php echo base_url('view_reports'); ?>">
                         <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -129,7 +114,7 @@
                         <span class="nav-link-text ms-1">Reports</span>
                     </a>
                 </li>
-                
+
             </ul>
         </div>
 

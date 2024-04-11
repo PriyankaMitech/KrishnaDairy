@@ -87,5 +87,10 @@ class Home extends BaseController
         echo  view('view_reports',['data' => $data]);
         
     }
+    public function P_master()
+    {
+        echo  view('view_product_master');
+        
+    }
     
 }

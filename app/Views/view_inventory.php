@@ -77,15 +77,15 @@
                                                     <div class="row align-items-start">
                                                         <div class="col-4">
                                                             <label for="inventory-title"
-                                                                class="form-label text-center">Title</label>
+                                                                class="form-label text-center">product</label>
 
                                                             <select id="mainSelection" class="form-select form-control"
-                                                                name="title">
+                                                                name="product">
                                                                 <?php
-                                                                $uniqueTitles = array_unique(array_column($data['product'], 'title'));
-                                                                foreach ($uniqueTitles as $title):
+                                                                $uniqueTitles = array_unique(array_column($data['product'], 'product'));
+                                                                foreach ($uniqueTitles as $product):
                                                             ?>
-                                                                <option value="<?= $title; ?>"><?= ucfirst($title); ?>
+                                                                <option value="<?= $product; ?>"><?= ucfirst($product); ?>
                                                                 </option>
                                                                 <?php endforeach; ?>
                                                             </select>
@@ -96,15 +96,15 @@
                                                             <select id="categorySelection"
                                                                 class="form-select form-control" name="category">
                                                                 <?php
-                                                                        // Get the selected title from the form submission or default to the first title
-                                                                        $selectedTitle = isset($_POST['title']) ? $_POST['title'] : ($data['product'][0]['title'] ?? '');
+                                                                        // Get the selected product from the form submission or default to the first title
+                                                                        $selectedTitle = isset($_POST['product']) ? $_POST['product'] : ($data['product'][0]['product'] ?? '');
 
                                                                         // Get the selected category from the form submission or default to the first category of the selected title
                                                                         $selectedCategory = isset($_POST['category']) ? $_POST['category'] : '';
 
                                                                         // Filter products based on the selected title
                                                                         $filteredProducts = array_filter($data['product'], function($product) use ($selectedTitle) {
-                                                                            return $product['title'] === $selectedTitle;
+                                                                            return $product['product'] === $selectedTitle;
                                                                         });
 
                                                                         // Get unique categories for the filtered products
@@ -215,7 +215,7 @@
                                             Vendor name
                                         </th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Title
+                                            product
                                         </th>
                                         <th
                                             class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
@@ -259,7 +259,7 @@ foreach ($data['inventory'] as $product):
                                         <td class="text-center"><?= $product['type'] ?></td>
                                         <td class="text-center"><?= $product['source'] ?></td>
                                         <td class="text-center"><?= $product['vendor_name'] ?></td>
-                                        <td><?= $product['title'] ?></td>
+                                        <td><?= $product['product'] ?></td>
                                         <td><?= $product['category'] ?></td>
                                         <td class="text-center"><?= $product['unit'] ?></td>
                                         <td class="text-center"><?= $product['measurement'] ?></td>
