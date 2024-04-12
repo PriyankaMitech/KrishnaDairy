@@ -1,17 +1,19 @@
-
-
 html {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: "Josefin Sans", sans-serif;
     margin: 0;
     color: #000;
-    font-size:100%;
-    letter-spacing: 1px; 
+    font-size: 100%;
+    letter-spacing: 1px;
 }
-a, a:hover, a:focus a:active{
+
+a,
+a:hover,
+a:focus a:active {
     text-decoration: none;
     outline: 0;
 }
@@ -22,6 +24,7 @@ h1 {
     line-height: 32px;
     padding-top: 50px;
 }
+
 h1 a {
     color: #1f9792;
 }
@@ -30,6 +33,7 @@ h1 a {
     text-align: center;
     margin-top: 40px;
 }
+
 .price-table-wrapper .pricing-table {
     display: inline-block;
     border: 1px solid #C8C8C8;
@@ -39,6 +43,7 @@ h1 a {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
 .price-table-wrapper .pricing-table__header {
     padding: 20px;
     font-size: 22px;
@@ -47,6 +52,7 @@ h1 a {
     border-top-right-radius: 10px;
     margin: 0;
 }
+
 .price-table-wrapper .pricing-table__price {
     color: #000;
     padding: 20px;
@@ -54,6 +60,7 @@ h1 a {
     font-size: 40px;
     font-weight: 500;
 }
+
 .price-table-wrapper .pricing-table__button {
     display: block;
     text-decoration: none;
@@ -63,7 +70,9 @@ h1 a {
     overflow: hidden;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    width: 100%;
 }
+
 .price-table-wrapper .pricing-table__button:before {
     position: absolute;
     left: -20%;
@@ -78,6 +87,7 @@ h1 a {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
 .price-table-wrapper .pricing-table__button:after {
     position: absolute;
     content: '>';
@@ -91,47 +101,156 @@ h1 a {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
 .price-table-wrapper .pricing-table__button:hover {
     background: black;
 }
+
 .price-table-wrapper .pricing-table__list {
     color: #a0a0a0;
     margin: 0;
     padding: 0 20px 20px;
 }
+
 .price-table-wrapper .pricing-table__list li {
     padding: 15px;
     border-bottom: 1px solid #C8C8C8;
     list-style: none;
 }
+
 .price-table-wrapper .pricing-table__list li:last-child {
     border: none;
 }
+
 .price-table-wrapper .pricing-table:hover {
     box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.36);
 }
+
 .price-table-wrapper .pricing-table:hover .pricing-table__button {
     padding-left: 0;
     padding-right: 35px;
 }
+
 .price-table-wrapper .pricing-table:hover .pricing-table__button:before {
     top: -80%;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     width: 100%;
 }
+
 .price-table-wrapper .pricing-table:hover .pricing-table__button:after {
     opacity: 1;
     padding-right: 15px;
 }
+
 .copyright {
     padding: 30px 0;
     font-size: 15px;
     text-align: center;
 }
-.copyright a{
+
+.copyright a {
     text-decoration: none;
 }
-.copyright a:hover{
+
+.copyright a:hover {
     color: #000;
+}
+
+.nm {
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.nc {
+    font-size: 15px;
+    padding-top: 20px
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .contacts-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact {
+        flex-basis: 50%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .contact img {
+        height: auto;
+        width: 170px;
+        padding-left: 80px;
+    }
+
+    .contact p {
+        text-align: center;
+        /* Align the text to the center */
+        font-size: 25px;
+        font-weight: 600px;
+        color: #333;
+        /* Set the text color */
+    }
+
+    .txt {
+        text-align: center;
+        /* Align the text to the center */
+        font-size: 14px;
+        /* Adjust the font size */
+        color: #333;
+        padding-right: 160px;
+    }
+
+    .contact .email {
+        font-size: 14px;
+        /* Adjust the font size */
+        color: #0400f3;
+        /* Set the text color */
+        padding-top: 10px;
+    }
+
+    .Upi {
+        font-size: 14px !important;
+        color: #0400f3 !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        padding-right: 160px !important;
+    }
+
+    .copy-icon {
+        color: #3a3535;
+        padding-left: 0.5rem;
+    }
+
+    .share-button {
+        background-color: #ff7500;
+        /* Blue color */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: background-color 0.3s ease;
+        margin-left: 130px;
+    }
+
+    .share-button:hover {
+        background-color: #eb0593;
+        /* Darker blue color on hover */
+    }
+
 }
